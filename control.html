@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+ * This file is based on the server example of aiortc.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Control Page for 'Speak in Turn', a WebRTC Audio Queue system">
+    <meta itemprop="description" content="Control Page for 'Speak in Turn', a WebRTC Audio Queue system">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <base target="_blank">
+
+    <title>Control Page for 'Speak in Turn', a WebRTC Audio Queue system</title>
+
+    <link rel="stylesheet" href="speakinturn.css">
+
+</head>
+
+<body>
+
+<div id="status"></div>
+
+<div id="active-queue"></div>
+<div id="active-speaker">
+    <span id="active-id"></span>
+    <button id="done-speaking" onclick="bumpActive()" style="display: none;">
+        Done speaking
+    </button>
+</div>
+
+<button id="go-live" onclick="goLive()">Go live</button>
+<button id="shutdown" onclick="shutdown()">Shutdown</button>
+
+<pre id="queue-status"></pre>
+
+<pre id="ready-sdp"></pre>
+
+<div id="media">
+    <audio id="audio" autoplay="false"></audio>
+</div>
+
+<script src="control.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+ * This file is based on the server example of aiortc.
+-->
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Falsification of concept for 'Speak in Turn', a WebRTC Audio Queue system">
+    <meta itemprop="description" content="Falsification of concept for 'Speak in Turn', a WebRTC Audio Queue system">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <base target="_blank">
+
+    <title>Falsification of concept for 'Speak in Turn', a WebRTC Audio Queue system</title>
+
+    <link rel="stylesheet" href="speakinturn.css">
+
+</head>
+
+<body>
+
+<button id="queue" onclick="queue()">Queue</button>
+<button id="unqueue" onclick="unqueue()">Unqueue</button>
+
+<pre id="queue-status"></pre>
+<button id="status" onclick="status()">Status</button>
+
+<h2>State</h2>
+<p>
+    ICE gathering state: <span id="ice-gathering-state"></span>
+</p>
+<p>
+    ICE connection state: <span id="ice-connection-state"></span>
+</p>
+<p>
+    Signaling state: <span id="signaling-state"></span>
+</p>
+
+<h2>Data channel</h2>
+<pre id="data-channel" style="height: 200px;"></pre>
+
+<h2>SDP</h2>
+
+<h3>Offer</h3>
+<pre id="offer-sdp"></pre>
+
+<h3>Answer</h3>
+<pre id="answer-sdp"></pre>
+
+<!--
+<script src="http://webrtc.github.io/adapter/adapter-latest.js"></script>
+-->
+<script src="client.js"></script>
+
+</body>
+</html>
